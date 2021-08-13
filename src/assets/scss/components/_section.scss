@@ -1,0 +1,168 @@
+.section {
+    &-title {
+        margin-bottom: 1rem;
+        h1 {
+            font-weight: bold;
+            font-size: 31px;
+            color: $maincolor;
+            @media screen and (max-width: $phoneWidth) {
+                font-size: 23px;
+            }
+        }
+        h2 {
+            font-weight: bold;
+            font-size: 24px;
+            @media screen and (max-width: $phoneWidth) {
+                font-size: 21px;
+            }
+        }
+    }
+    &-text {
+        p {
+            color: #000;
+            @media screen and (max-width: $phoneWidth) {
+                font-size: 15px;
+            }
+        }
+    }
+    &-content {
+        display: grid;
+        margin-top: 3rem;
+        grid-template-columns: repeat(2, 1fr);
+        @media screen and (max-width: $phoneWidth) {
+            display: flex;
+            margin-top: 0;
+            flex-direction: column;
+        }
+    }
+    &-item {
+        &:last-child {
+            margin-left: auto;
+        }
+        &-btnwrapp {
+            display: flex;
+            @media screen and (max-width: $phoneWidth) {
+                display: grid;
+                margin: 1.5rem 0;
+                justify-content: flex-start;
+            }
+        }
+        &__img {
+            padding: 1rem 0;
+            img {
+                @media screen and (max-width: $phoneWidth) {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+        &__btn {
+            display: flex;
+            margin: 1rem 0;
+            align-items: flex-end;
+            @media screen and (max-width: $phoneWidth) {
+                margin: 0;
+            }
+            &:not(:first-child) {
+                margin-left: 1rem;
+                @media screen and (max-width: $phoneWidth) {
+                    margin-left: 0;
+                }
+            }
+            @media screen and (max-width: $phoneWidth) {
+                margin-left: 0;
+                margin-bottom: 1rem;
+                justify-content: center;
+            }
+            a {
+                padding: 0.5rem 1rem;
+                border-radius: 25px;
+                color: #fff;
+                background: $maincolor;
+            }
+            p {
+                padding: 0.5rem 1rem;
+                border-radius: 25px;
+                color: #fff;
+                background: $maincolor;
+            }
+        }
+        &__list {
+            ul {
+                li {
+                    margin-bottom: 0.5rem;
+                    font-size: 16px;
+                    @media screen and (max-width: $phoneWidth) {
+                        font-size: 14px;
+                    }
+                    strong {
+                        font-weight: bold;
+                        font-size: 18px;
+                        color: $maincolor;
+                        @media screen and (max-width: $phoneWidth) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.order {
+    @media screen and (max-width: $phoneWidth) {
+        order: -1;
+    }
+}
+
+.cabel {
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 2rem;
+        @media screen and (max-width: $phoneWidth) {
+            grid-template-columns: repeat(1,1fr);
+            grid-gap: 1rem;
+        }
+    }
+    &-item {
+        display: grid;
+        justify-content: center;
+        padding: 1.2rem 1rem;
+        background: #fff;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 25px;
+        &__title {
+            display: flex;
+            justify-content: center;
+            h2 {
+                font-size: 17px;
+                text-align: center;
+                @media screen and (max-width: $phoneWidth) {
+                    font-size: 15px;
+                }
+            }
+        }
+        &__img {
+            display: flex;
+            padding: 2rem 0;
+            justify-content: center;
+            img {
+                @media screen and (max-width: $phoneWidth) {
+                    width: 80%;
+                }
+            }
+        }
+        &__btn {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            a {
+                padding: 0.5rem 1rem;
+                border-radius: 25px;
+                color: #fff;
+                background: $maincolor;
+            }
+        }
+    }
+}

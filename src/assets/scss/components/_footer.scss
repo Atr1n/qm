@@ -1,0 +1,18 @@
+.footer {
+    padding: 3rem 0;
+    background: $maincolor;
+    &-logo {
+        img {
+            width: 240px;
+        }
+    }
+    &-copy {
+        margin-top: 5rem;
+        p {
+            color: #fff;
+            @media screen and (max-width: $phoneWidth) {
+                font-size: 14px;
+            }
+        }
+    }
+}

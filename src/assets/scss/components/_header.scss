@@ -1,0 +1,31 @@
+.header {
+    padding: 2rem 0;
+    background: $maincolor;
+    @media screen and (max-width: $phoneWidth) {
+        padding: 2rem 0;
+    }
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-logo {
+        img {
+            width: 240px;
+            @media screen and (max-width: $phoneWidth) {
+               width: 100px;
+            }
+        }
+    }
+    &-contacts {
+        a {
+            padding: 0.4rem 1rem;
+            border-radius: 25px;
+            color: #000;
+            background: #fff;
+            @media screen and (max-width: $phoneWidth) {
+                font-size: 16px;
+            }
+        }
+    }
+}

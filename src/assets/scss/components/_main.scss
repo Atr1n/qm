@@ -1,0 +1,41 @@
+.main {
+    height: 570px;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    background: url(../img/main-bg.jpg) center no-repeat;
+    background-size: cover;
+    @media screen and (max-width: $phoneWidth) {
+        height: 100%;
+        padding: 2rem 0;
+        margin-bottom: 1rem;
+        background: url(../img/main-bg.jpg) left no-repeat;
+    }
+    &-item {
+        &__title {
+            margin-bottom: 2rem;
+            @media screen and (max-width: $phoneWidth) {
+              margin-bottom: 2rem;
+            }
+            h1 {
+              font-size: 40px;
+              line-height: 43px;
+              font-weight: bold;
+              color: #fff;
+              @media screen and (max-width: $phoneWidth) {
+                font-size: 21px;
+                line-height: 30px;
+              }
+            }
+        }
+        &__text {
+            p {
+                font-size: 18px;
+                color: #fff;
+                @media screen and (max-width: $phoneWidth) {
+                  font-size: 15px;
+                  line-height: 24px;
+                }
+            }
+        }
+    }
+}
