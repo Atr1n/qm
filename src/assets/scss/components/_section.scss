@@ -83,8 +83,8 @@
             p {
                 padding: 0.5rem 1rem;
                 border-radius: 25px;
-                color: #fff;
-                background: $maincolor;
+                color: $maincolor;
+                border: 1px solid $maincolor;
             }
         }
         &__list {

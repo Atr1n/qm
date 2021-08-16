@@ -1,3 +1,3 @@
 import './slider'
 import './mask'
-import './burger'
+import './modals'
