@@ -16,7 +16,7 @@
     }
     &-logo {
         img {
-            width: 240px;
+            width: 140px;
             @media screen and (max-width: $phoneWidth) {
                width: 100px;
             }
@@ -29,8 +29,8 @@
         a {
             padding: 0.4rem 1rem;
             border-radius: 25px;
-            color: #000;
-            background: #fff;
+            color: #fff;
+            background: $secondcolor;
             @media screen and (max-width: $phoneWidth) {
                 display: flex;
                 margin-bottom: 1rem;

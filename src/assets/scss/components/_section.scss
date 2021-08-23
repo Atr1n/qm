@@ -4,22 +4,23 @@
         h1 {
             font-weight: bold;
             font-size: 31px;
-            color: $maincolor;
+            color: $secondcolor;
             @media screen and (max-width: $phoneWidth) {
-                font-size: 23px;
+                font-size: 25px;
             }
         }
         h2 {
             font-weight: bold;
             font-size: 24px;
             @media screen and (max-width: $phoneWidth) {
-                font-size: 21px;
+                font-size: 18px;
             }
         }
     }
     &-text {
         p {
-            color: #000;
+            color: $secondcolor;
+            font-size: 16px;
             @media screen and (max-width: $phoneWidth) {
                 font-size: 15px;
             }
@@ -29,6 +30,7 @@
         display: grid;
         margin-top: 3rem;
         grid-template-columns: repeat(2, 1fr);
+        align-items: center;
         @media screen and (max-width: $phoneWidth) {
             display: flex;
             margin-top: 0;
@@ -38,6 +40,7 @@
     &-item {
         &:last-child {
             margin-left: auto;
+            z-index: 100;
         }
         &-btnwrapp {
             display: flex;
@@ -52,7 +55,7 @@
             img {
                 @media screen and (max-width: $phoneWidth) {
                     display: block;
-                    width: 100%;
+                    max-width: 320px;
                 }
             }
         }
@@ -78,13 +81,7 @@
                 padding: 0.5rem 1rem;
                 border-radius: 25px;
                 color: #fff;
-                background: $maincolor;
-            }
-            p {
-                padding: 0.5rem 1rem;
-                border-radius: 25px;
-                color: $maincolor;
-                border: 1px solid $maincolor;
+                background: $secondcolor;
             }
         }
         &__list {
@@ -92,16 +89,9 @@
                 li {
                     margin-bottom: 0.5rem;
                     font-size: 16px;
+                    list-style: circle;
                     @media screen and (max-width: $phoneWidth) {
                         font-size: 14px;
-                    }
-                    strong {
-                        font-weight: bold;
-                        font-size: 18px;
-                        color: $maincolor;
-                        @media screen and (max-width: $phoneWidth) {
-                            font-size: 16px;
-                        }
                     }
                 }
             }

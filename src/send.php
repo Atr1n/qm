@@ -5,7 +5,7 @@ header("Content-Type: text/html; charset=UTF-8");
 
 $mail_to = "Order@meteorit.KZ"; // E-mail на который будут отправляться уведомления
 $mail_from = "mail@".preg_replace("/^www\./ui", "", $_SERVER['HTTP_HOST']); $mail_from_name = $_SERVER['HTTP_HOST']; // E-mail с которого будут отправляться уведомления ($_SERVER['HTTP_HOST'] - домен текущего сайта)
-$mail_subject = "Заявка с cyberpower.com.kz/"; // Тема уведомлений
+$mail_subject = "Заявка с tripp-lite.kz/"; // Тема уведомлений
 
 
 $labels = array(

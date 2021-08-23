@@ -3,13 +3,13 @@
     background: $maincolor;
     &-logo {
         img {
-            width: 240px;
+            width: 140px;
         }
     }
     &-copy {
         margin-top: 5rem;
         p {
-            color: #fff;
+            color: $secondcolor;
             @media screen and (max-width: $phoneWidth) {
                 font-size: 14px;
             }

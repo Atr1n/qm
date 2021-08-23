@@ -9,7 +9,7 @@ const swiper = new Swiper('.swiper-container', {
     watchOverflow: true,
 
     autoplay: {
-        delay: 2000,
+        delay: 2500,
     },
 
     pagination: {
@@ -19,11 +19,11 @@ const swiper = new Swiper('.swiper-container', {
 
     breakpoints: {
         1024: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 40
         },
         1170: {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 40
         }
     }

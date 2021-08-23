@@ -297,4 +297,4 @@ Example 2: `@include font-face("OpenSans", "../fonts/OpenSans/opensansItalic", 4
 ## License
 [MIT](./LICENSE)
 
-Copyright (c) 2018-present, [Evgenii Vedegis](https://github.com/vedees)
+Copyright (c) 2021-present, [Ogurov Maxim](https://github.com/Atr1n)
