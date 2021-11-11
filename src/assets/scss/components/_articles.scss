@@ -1,0 +1,86 @@
+.articles {
+    margin: 5rem 0;
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        h2 {
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 120%;
+            color: #fff;
+            background: #1771F1;
+            border-radius: 5px 5px 0px 0px;
+        }
+    }
+    &-content {
+        display: grid;
+        margin-top: 3rem;
+        grid-template-columns: 25rem 1fr 1fr;
+    }
+    &-btn {
+        display: flex;
+        margin-top: 3rem;
+        justify-content: center;
+        a {
+            padding: 1rem 1.5rem;
+            background: #FFFFFF;
+            border: 1px solid #1771F1;
+            box-sizing: border-box;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 130%;
+            color: #1771F1;
+        }
+    }
+    &-item {
+        &:nth-child(2) {
+            margin-left: 4rem;
+        }
+        &__title {
+            h3 {
+                padding: 2rem 0 .5rem 0;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 120%;
+                color: #222222;
+            }
+            p {
+                padding-bottom: 2rem;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 120%;
+                color: #777777;
+            }
+        }
+        &__date {
+            display: flex;
+            span {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 130%;
+                color: #777777;
+                &:nth-child(2) {
+                    margin-left: 2rem;
+                }
+            }
+        }
+        &__img {
+            margin-bottom: 1rem;
+        }
+        &__last {
+            h3 {
+                padding-bottom: 1rem;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 130%;
+                color: #222222;
+                span {
+                    color: #FF005C;
+                }
+            }
+        }
+    }
+}

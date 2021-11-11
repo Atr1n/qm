@@ -1,18 +1,16 @@
 .footer {
-    padding: 3rem 0;
-    background: $maincolor;
-    &-logo {
-        img {
-            width: 140px;
-        }
+    padding: 3rem;
+    background: rgba(13, 33, 71, 0.65);
+    &-content {
+        display: flex;
     }
-    &-copy {
-        margin-top: 5rem;
-        p {
-            color: $secondcolor;
-            @media screen and (max-width: $phoneWidth) {
-                font-size: 14px;
-            }
+    &-item {
+        h4 {
+            margin-left: 1rem;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 130%;
+            color: #FFFFFF;
         }
     }
 }

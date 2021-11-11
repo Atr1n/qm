@@ -1,59 +1,66 @@
 .main {
-    height: 570px;
-    padding: 3rem 0;
-    margin-bottom: 2rem;
-    background: url(../img/main-bg.png) center no-repeat;
-    background-size: cover;
-    @media screen and (max-width: $phoneWidth) {
-        height: 100%;
-        padding: 2rem 0;
-        margin-bottom: 1rem;
-        margin-top: 7rem;
-        background: url(../img/main-bg.png) left no-repeat;
+    &-content {
+        display: grid;
+        margin-top: 8em;
+        align-items: center;
+        justify-content: center;
     }
     &-item {
-      margin-top: 5rem;
-        &__title {
-            margin-bottom: 2rem;
-            @media screen and (max-width: $phoneWidth) {
-              margin-bottom: 2rem;
-            }
-            h1 {
-              font-size: 44px;
-              line-height: 43px;
-              font-weight: bold;
-              color: #fff;
-              @media screen and (max-width: $phoneWidth) {
-                font-size: 21px;
-                line-height: 30px;
-              }
-            }
-        }
-        &__text {
-            p {
-                font-size: 24px;
-                color: #fff;
-                @media screen and (max-width: $phoneWidth) {
-                  font-size: 15px;
-                  line-height: 24px;
-                }
-            }
-        }
-        &__btn {
-          margin-top: 2rem;
-          a {
-            padding: 0.4rem 1rem;
-            border-radius: 25px;
+        position: relative;
+        display: grid;
+        margin-bottom: 8em;
+        justify-content: center;
+        h1 {
+            font-weight: bold;
+            font-size: 64px;
+            line-height: 120%;
+            text-align: center;
+            letter-spacing: 0.003em;
             color: #fff;
-            background: $secondcolor;
-
-            @media screen and (max-width: $phoneWidth) {
-              display: flex;
-              margin-bottom: 1rem;
-              justify-content: center;
-              font-size: 16px;
-            }
-          }
         }
+        a {
+            padding: .6em 1.5em;
+            margin: 0 auto;
+            margin-bottom: 2em;
+            text-align: center;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 120%;
+            color: #1771F1;
+            background: #FFFFFF;
+            box-shadow: 5px 7px 45px rgba(255, 255, 255, 0.25);
+            border-radius: 10px;
+
+            &:nth-child(2) {
+                background: rgba(255, 255, 255, 0.19);
+                backdrop-filter: blur(65px);
+                border-radius: 10px;
+                color: #fff;
+            }
+        }
+    }
+    &-img {
+        position: relative;
+        top: -13rem;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    &-svg-1 {
+        position: absolute;
+        top: 1rem;
+        left: -7rem;
+    }
+
+    &-svg-2 {
+        position: absolute;
+        top: 12rem;
+        right: -7rem;
+    }
+
+    &-svg-3 {
+        position: absolute;
+        bottom: 7rem;
     }
 }

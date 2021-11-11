@@ -1,42 +1,25 @@
 .header {
-    padding: 2rem 0;
-    background: $maincolor;
-    @media screen and (max-width: $phoneWidth) {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: .5rem 0;
-        z-index: 1000000;
-    }
+    padding-top: 2em;
     &-content {
+        padding: 1em 1.2em;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-radius: 10px;
+        background: #fff;
     }
-    &-logo {
-        img {
-            width: 140px;
-            @media screen and (max-width: $phoneWidth) {
-               width: 100px;
-            }
-        }
-    }
-    &-contacts {
-        @media screen and (max-width: $phoneWidth) {
-            display: grid;
-        }
-        a {
-            padding: 0.4rem 1rem;
-            border-radius: 25px;
-            color: #fff;
-            background: $secondcolor;
-            @media screen and (max-width: $phoneWidth) {
-                display: flex;
-                margin-bottom: 1rem;
-                justify-content: center;
+    &-item {
+        display: flex;
+        li {
+            margin-left: 1.3em;
+            a {
                 font-size: 16px;
+                font-weight: 500;
             }
         }
+    }
+    &-active {
+        padding-bottom: 0.2em;
+        border-bottom: 2px solid #1771F1;
     }
 }
