@@ -1,0 +1,63 @@
+.cabinet {
+    &__profile {
+        &__item {
+            &__title {
+                margin-bottom: 1rem;
+                h2 {
+                    font-weight: bold;
+                    font-size: 23px;
+                    line-height: 27px;
+                    color: #000000;
+                }
+            }
+        }
+
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        &__form__content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &__list {
+            &__item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 330px;
+                padding: 10px 10px 10px 15px;
+                margin-bottom: 1rem;
+                border: 1px solid #FFDE17;
+                border-radius: 5px;
+                cursor: pointer;
+                button {
+                    background: none;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__btn {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 4rem;
+            a {
+                width: 330px;
+                padding: 1rem 2rem;
+                background: #FFDE17;
+                border-radius: 5px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 16px;
+                text-transform: uppercase;
+                color: #000000;
+                text-align: center;
+            }
+        }
+    }
+}

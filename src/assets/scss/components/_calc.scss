@@ -1,0 +1,132 @@
+.calc {
+    height: 100vh;
+    background: url(../img/main-bg.png) no-repeat;
+    background-size: cover;
+    &-title {
+        display: grid;
+        justify-content: center;
+        h1 {
+            margin-bottom: 1rem;
+            font-weight: 900;
+            font-size: 35px;
+            line-height: 45px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+    &-content {
+        width: 550px;
+        margin: 1.5rem auto;
+        padding: 2rem 3rem;
+        border-radius: 10px;
+        background: #fff;
+    }
+    &-btn {
+        display: flex;
+        justify-content: center;
+        a {
+            width: 330px;
+            padding: 1rem 2rem;
+            background: #FFDE17;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: #000000;
+            text-align: center;
+        }
+    }
+    &-item {
+        margin-bottom: 1.5rem;
+        &-title {
+            display: flex;
+            justify-content: space-between;
+            h2 {
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 24px;
+                color: #000000;
+            }
+            p {
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 24px;
+                color: #000000;
+            }
+        }
+        &-range {
+            input {
+                width: 100%;
+            }
+        }
+        &-summ {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.4rem;
+            p {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 15px;
+                color: #C9C9C9;
+            }
+        }
+        &-desc {
+            display: grid;
+            justify-content: center;
+            padding-top: 0.6rem;
+            p {
+                margin-bottom: 1rem;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 18px;
+                color: #000000;
+                text-align: center;
+                strong {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.calcSlider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  background: #FFDE17;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.calcSlider:hover {
+  opacity: 1;
+}
+
+.calcSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #FFDE17;
+  cursor: pointer;
+}
+
+.calcSlider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #FFDE17;
+  cursor: pointer;
+}

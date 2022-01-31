@@ -60,6 +60,7 @@
     &__content-2 {
         display: flex;
         justify-content: space-between;
+        gap: 1rem;
     }
     &__content-3 {
         display: flex;
@@ -112,6 +113,9 @@
             justify-content: flex-end;
             a {
                 width: 330px;
+                height: 55px;
+                display: flex;
+                justify-content: center;
                 padding: 1rem 2rem;
                 background: #FFDE17;
                 border-radius: 5px;
@@ -214,6 +218,9 @@
                 align-items: center;
                 text-transform: uppercase;
                 color: #000000;
+                img {
+                    padding-right: 0.8rem;
+                }
             }
             &__next {
                 padding: 1rem 6.5rem;

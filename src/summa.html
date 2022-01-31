@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Quick Money</title>
+	</head>
+    
+	<body>
+
+		<header class="header">
+			<div class="header__container">
+				<div class="header__content">
+					<div class="header__item">
+						<div class="header__logo">
+							<a href="index.html"><img src="assets/img/logo.svg" alt="qm"></a>
+						</div>
+						<div class="header__language">
+							<a class="header__language__active" href="#">Ru</a>
+							<span>|</span>
+							<a href="#">Kz</a>
+						</div>
+					</div>
+					<ul class="header__item">
+						<li><a class="header__links" href="howGet.html">Как получить деньги</a></li>
+						<li><a class="header__links" href="howBack.html">Как вернуть деньги</a></li>
+						<li><a class="header__links" href="quan.html">Вопрос / Ответ</a></li>
+						<li><a class="header__item__phone" href="#"><img src="assets/img/phone.svg" alt="телефон">+7 701 059 58 17</a></li>
+						<li><a class="header__item__in" href="registration.html"><img src="assets/img/header-icon.svg">Вход</a></li>
+						<li><a class="header__links dn" href="registration.html"><img src="assets/img/logout.svg"></a></li>
+					</ul>
+				</div>
+			</div>
+            <section class="calc">
+                <div class="container">
+                    <div class="calc-title">
+                        <h1>Сумма</h1>
+                        <p>Выберите необходиму сумму микрокредита, <br> которая вам необходима.</p>
+                    </div>
+                    <div class="calc-content">
+                        <div class="calc-item">
+                            <div class="calc-item-title">
+                                <h2>Сумма микрокредита:</h2>
+                                <p><strong id="calcSumm"></strong> ₸</p>
+                            </div>
+                        </div>
+                        <div class="calc-item">
+                            <div class="calc-item-range">
+                                <input id="calcRange" class="calcSlider" type="range" min="10000" max="145000" value="20000">
+                            </div>
+                            <div class="calc-item-summ">
+                                <p><span>10 000</span> ₸</p>
+                                <p><span>50 000</span> ₸</p>
+                                <p><span>100 000</span> ₸</p>
+                                <p><span>145 000</span> ₸</p>
+                            </div>
+                        </div>
+                        <div class="calc-item">
+                            <div class="calc-item-desc">
+                                <p>Дата погашения: <strong>10 октября 2021</strong></p>
+                                <p>Бонус: <strong>15 дней бесплатно</strong></p>
+                                <p>Процент после 16 дней: <strong>10%</strong></p>
+                                <p>Сумма погашения: <strong>22 800</strong> ₸</p>
+                            </div>
+                        </div>
+                        <div class="calc-btn">
+                            <a href="#">далее</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+		</header>
+
+        <script>
+            const calcRange = document.getElementById("calcRange");
+            const calcSumm = document.getElementById("calcSumm");
+
+            calcSumm.innerHTML = calcRange.value;
+
+            calcRange.oninput = function() {
+                calcSumm.innerHTML = this.value;
+            }
+        </script>
+        
+ 	</body>
+</html>
