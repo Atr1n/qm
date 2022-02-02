@@ -1,0 +1,125 @@
+.slct {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 330px;
+    height: 55px;
+    padding: 1rem;
+    background: #e7ecf2;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.slct::after {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 7px;
+    top: 1.5rem;
+    right: 1rem;
+    background-image: url(../img/select-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.slct.active {
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+}
+
+.drop {
+    position: absolute;
+    display: none;
+    margin: 0;
+    padding: 0;
+    width: 330px;
+    border: 1px solid #cecece;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #fff;
+    z-index: 1;
+}
+
+.drop li {
+    display: block;
+    padding: 0.6rem 1rem;
+    border-top: 1px dotted #e8e8e8;
+    color: #000;
+    font-size: 16px;
+    line-height: 20px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.drop li:hover {
+    background-color: #e8e8e8;
+    color: #222;
+}
+
+// 2
+
+.slct-2 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 330px;
+  height: 55px;
+  padding: 1rem;
+  background: #e7ecf2;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.slct-2::after {
+  content: '';
+  position: absolute;
+  width: 11px;
+  height: 7px;
+  top: 1.5rem;
+  right: 1rem;
+  background-image: url(../img/select-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.slct-2.active {
+  border-radius: 5px 5px 0 0;
+  border-bottom: none;
+}
+
+.drop-2 {
+  position: absolute;
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 330px;
+  border: 1px solid #cecece;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #fff;
+  z-index: 1;
+}
+
+.drop-2 li {
+  display: block;
+  padding: 0.6rem 1rem;
+  border-top: 1px dotted #e8e8e8;
+  color: #000;
+  font-size: 16px;
+  line-height: 20px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.drop-2 li:hover {
+  background-color: #e8e8e8;
+  color: #222;
+}

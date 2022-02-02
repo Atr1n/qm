@@ -55,20 +55,34 @@
 						<div class="reg__item">
 							<input class="main-input" type="second_name" placeholder="Должность">
 						</div>
-						<div class="reg__item">
-							<input class="main-input" type="select" placeholder="Должность">
-						</div>
-						<div class="reg__item">
-							<input class="main-input" type="select" placeholder="Дополнительный доход">
-						</div>
+						<div class="select">
+							<a href="#" class="slct">Должность</a>
+							<ul class="drop">
+								<li>asd1</li>
+								<li>asd2</li>
+								<li>asd3</li>
+								<li>asd4</li>
+							</ul>
+							<input type="hidden" id="select" />
+						</div>	
+						<div class="select-2">
+							<a href="#" class="slct-2">Дополнительный доход</a>
+							<ul class="drop-2">
+								<li>asd1</li>
+								<li>asd2</li>
+								<li>asd3</li>
+								<li>asd4</li>
+							</ul>
+							<input type="hidden" id="select" />
+						</div>	
 					</div>
 					<div class="reg__bid__title">
 						<h3>Имеется ли у вас действующая просрочка более 60-и дней по займам?</h3>
 					</div>
 					<div class="reg__radio" action="#">
-						<input class="reg__radio__item" type="radio" id="contactChoice1"	name="contact" value="email">
+						<input class="radio-btn" type="radio" id="contactChoice1"	name="contact" value="email">
 						<label for="contactChoice1">Нет</label>
-						<input class="reg__radio__item" type="radio" id="contactChoice2" name="contact" value="phone">
+						<input class="radio-btn" type="radio" id="contactChoice2" name="contact" value="phone">
 						<label for="contactChoice2">Да</label>
 					</div>
 				</form>
@@ -83,3 +97,97 @@
 		</div>
 	</section>
 </header>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+	var mySettings = {
+			key : true,
+			dropBlock : $('.drop'),
+			virtualSelect : $('.slct')
+		}
+		
+		mySettings.virtualSelect.click(function(){
+			if( mySettings.dropBlock.is(':hidden') ) {
+				mySettings.dropBlock.slideDown();
+				$(this).addClass('active');
+			} 
+			else {
+				mySettings.dropBlock.slideUp();
+				$(this).delay(400).queue(function(nextJ){
+					$(this).removeClass("active");
+					nextJ();
+				});
+			}
+			return false;
+		});	
+		mySettings.dropBlock.find('li').click(function(){
+			var selectResult = $(this).html();
+			$(this).parent().parent().find('input').val(selectResult);
+			mySettings.dropBlock.slideUp();				
+			mySettings.virtualSelect.delay(400).queue(function(nextJs){
+				$(this).removeClass("active");
+				nextJs();
+			}).html(selectResult);
+			return false;
+		});	
+		$(document).click(function(event) {
+			if(mySettings.key && !$(event.target).closest(mySettings.dropBlock).length){
+				mySettings.dropBlock.slideUp();
+				mySettings.virtualSelect.delay(400).queue(function(nextJs){
+					$(this).removeClass("active");
+					nextJs();
+				});
+				mySettings.key = true; 
+				return;
+			}	
+		});
+	});
+</script>
+
+<script>
+	$(document).ready(function(){
+	var mySettings = {
+			key2 : true,
+			dropBlock2 : $('.drop-2'),
+			virtualSelect2 : $('.slct-2')
+		}
+		
+		mySettings.virtualSelect2.click(function(){
+			if( mySettings.dropBlock2.is(':hidden') ) {
+				mySettings.dropBlock2.slideDown();
+				$(this).addClass('active');
+			} 
+			else {
+				mySettings.dropBlock2.slideUp();
+				$(this).delay(400).queue(function(nextJ){
+					$(this).removeClass("active");
+					nextJ();
+				});
+			}
+			return false;
+		});	
+		mySettings.dropBlock2.find('li').click(function(){
+			var selectResult = $(this).html();
+			$(this).parent().parent().find('input').val(selectResult);
+			mySettings.dropBlock2.slideUp();				
+			mySettings.virtualSelect2.delay(400).queue(function(nextJs){
+				$(this).removeClass("active");
+				nextJs();
+			}).html(selectResult);
+			return false;
+		});	
+		$(document).click(function(event) {
+			if(mySettings.key2 && !$(event.target).closest(mySettings.dropBlock2).length){
+				mySettings.dropBlock2.slideUp();
+				mySettings.virtualSelect2.delay(400).queue(function(nextJs){
+					$(this).removeClass("active");
+					nextJs();
+				});
+				mySettings.key2 = true; 
+				return;
+			}	
+		});
+	});
+</script>

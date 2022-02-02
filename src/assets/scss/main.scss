@@ -3,6 +3,12 @@
 @import 'utils/fonts';
 @import 'utils/reset';
 
+@import 'components/inputs';
+@import 'components/select';
+@import 'components/tabs';
+@import 'components/modals';
+@import 'components/accordion';
+
 @import 'components/mainPage';
 @import 'components/howPage';
 @import 'components/quanPage';
@@ -11,8 +17,6 @@
 @import 'components/cabinet-profile';
 @import 'components/calc';
 
-@import 'components/tabs';
-@import 'components/modals';
 
 .main__btn {
 	display: flex;

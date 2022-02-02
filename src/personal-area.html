@@ -188,8 +188,10 @@
                                             </a>
                                         </div>
                                         <div class="cabinet__documents-checkbox">
-                                            <input type="checkbox" checked>
-                                            <p>Ознакомлен(на) со всеми <br> предоставленными документами.</p>
+                                            <input class="checkbox-btn" id="checkbox" type="checkbox" checked>
+                                            <label for="checkbox">
+                                                <p>Ознакомлен(на) со всеми <br> предоставленными документами.</p>
+                                            </label>
                                         </div>
                                         <div class="cabinet__documents-btn">
                                             <a href="#">отправить смс код</a>
@@ -359,9 +361,16 @@
                                                 <div class="cabinet__profile__form__item">
                                                     <input class="main-input" type="second_name" placeholder="Фамилия">
                                                 </div>
-                                                <div class="cabinet__profile__form__item">
-                                                    <input class="main-input" type="select" placeholder="Количество иждивенцев">
-                                                </div>
+                                                <div class="select">
+                                                    <a href="#" class="slct">Количество иждивенцев</a>
+                                                    <ul class="drop">
+                                                        <li>asd1</li>
+                                                        <li>asd2</li>
+                                                        <li>asd3</li>
+                                                        <li>asd4</li>
+                                                    </ul>
+                                                    <input type="hidden" id="select" />
+                                                </div>	
                                             </div>
                                             <div class="cabinet__profile__item__title">
                                                 <h2>Удостоверение личности</h2>
@@ -378,9 +387,9 @@
                                                 <h3>Кем выдано</h3>
                                             </div>
                                             <div class="reg__radio" action="#">
-                                                <input class="reg__radio__item" type="radio" id="contactChoice1"	name="contact" value="email">
+                                                <input class="radio-btn" type="radio" id="contactChoice1" name="contact" value="email">
                                                 <label for="contactChoice1">МВД РК</label>
-                                                <input class="reg__radio__item" type="radio" id="contactChoice2" name="contact" value="phone">
+                                                <input class="radio-btn" type="radio" id="contactChoice2" name="contact" value="phone">
                                                 <label for="contactChoice2">МВД РК</label>
                                             </div>
                                             <div class="cabinet__profile__btn">
@@ -510,14 +519,13 @@
                         document.querySelector(`[data-target="modal"]`).classList.add("modal--visible"), modalOverlay.classList.add("modal-overlay--visible")
                     }))
                 }))
-            })) 
+            }))
 
-            modalOverlay.addEventListener("click", (e => {
-                (e.target), e.target == modalOverlay && (modalOverlay.classList.remove("modal-overlay--visible"), modals.forEach((e => {
+            modalCLose.addEventListener("click", (e => {
+                modals.forEach((e => {
                     e.classList.remove("modal--visible")
-                })))
-                    
-                modalOverlay.classList.remove('modal-overlay--visible')
+                    modalOverlay.classList.remove("modal-overlay--visible")
+                }))
             }))
         </script>
 
@@ -577,5 +585,55 @@
             });
         </script>
 
+        <!-- select-->
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+            var mySettings = {
+                    key : true,
+                    dropBlock : $('.drop'),
+                    virtualSelect : $('.slct')
+                }
+                
+                mySettings.virtualSelect.click(function(){
+                    if( mySettings.dropBlock.is(':hidden') ) {
+                        mySettings.dropBlock.slideDown();
+                        $(this).addClass('active');
+                    } 
+                    else {
+                        mySettings.dropBlock.slideUp();
+                        $(this).delay(400).queue(function(nextJ){
+                            $(this).removeClass("active");
+                            nextJ();
+                        });
+                    }
+                    return false;
+                });	
+                mySettings.dropBlock.find('li').click(function(){
+                    var selectResult = $(this).html();
+                    $(this).parent().parent().find('input').val(selectResult);
+                    mySettings.dropBlock.slideUp();				
+                    mySettings.virtualSelect.delay(400).queue(function(nextJs){
+                        $(this).removeClass("active");
+                        nextJs();
+                    }).html(selectResult);
+                    return false;
+                });	
+                $(document).click(function(event) {
+                    if(mySettings.key && !$(event.target).closest(mySettings.dropBlock).length){
+                        mySettings.dropBlock.slideUp();
+                        mySettings.virtualSelect.delay(400).queue(function(nextJs){
+                            $(this).removeClass("active");
+                            nextJs();
+                        });
+                        mySettings.key = true; 
+                        return;
+                    }	
+                });
+            });
+        </script>
+        
  	</body>
 </html>
