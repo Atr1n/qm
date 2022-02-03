@@ -41,28 +41,40 @@
                     <div class="tabs">
                         <ul class="tabs__list">
                             <li class="tabs__item">
-                                <button class="tabs__btn tabs__btn--active" data-tabs-path="main">
+                                <div class="tabs__btn tabs__btn--active" data-tabs-path="micredits">
                                     <img src="assets/img/cabinet-link-1.svg">
                                     Микрокредиты
-                                </button>
+                                </div>
                             </li>
                             <li class="tabs__item">
-                                <button class="tabs__btn" data-tabs-path="archive">
+                                <div class="tabs__btn" data-tabs-path="profile">
                                     <img src="assets/img/cabinet-link-2.svg">
                                     Профиль
-                                </button>
+                                </div>
                             </li>
                             <li class="tabs__item">
-                                <button class="tabs__btn" data-tabs-path="settings">
+                                <div class="tabs__btn" data-tabs-path="maps">
                                     <img src="assets/img/cabinet-link-3.svg">
+                                    Карты
+                                </div>
+                            </li>
+                            <li class="tabs__item">
+                                <div class="tabs__btn" data-tabs-path="cards">
+                                    <img src="assets/img/cabinet-link-4.svg">
+                                    Счета
+                                </div>
+                            </li>
+                            <li class="tabs__item">
+                                <div class="tabs__btn" data-tabs-path="dog">
+                                    <img src="assets/img/cabinet-link-5.svg">
                                     Договора
-                                </button>
+                                </div>
                             </li>
                         </ul>
 
                         <!-- МИКРОКРЕДИТЫ -->
 
-                        <div class="tabs__content tabs__content--active" data-tabs-target="main">
+                        <div class="tabs__content tabs__content--active" data-tabs-target="micredits">
 
                                 <!-- Статус Ваша заявка в обработке -->
                         
@@ -310,12 +322,12 @@
 
                         <!-- ПРОФИЛЬ -->
                         
-                        <div class="tabs__content" data-tabs-target="archive">
+                        <div class="tabs__content" data-tabs-target="profile">
                             <div class="cabinet__wrapper">
                                 <div class="cabinet__profile__content">
                                     <div class="cabinet__profile__item">
                                         <ul class="cabinet__profile__list">
-                                            <li class="cabinet__profile__list__item">
+                                            <li class="cabinet__profile__list__item cabinet__profile__list__item--active">
                                                 <button>
                                                     Личные данные
                                                 </button>
@@ -401,9 +413,92 @@
                              </div>
                         </div>
 
+                        <!-- Карты -->
+
+                        <div class="tabs__content" data-tabs-target="maps">
+                            <div class="cabinet__wrapper">
+                                <div class="cabinet__dogovora">
+                                    <div class="legal__item">
+                                        <div class="legal__item__img">
+                                            <img src="assets/img/legal-2.svg">
+                                        </div>
+                                        <div class="legal__item__text">
+                                            <a href="#">Договор о предоставлении микрокредита</a>
+                                        </div>
+                                    </div>
+                                    <div class="legal__item">
+                                        <div class="legal__item__img">
+                                            <img src="assets/img/legal-2.svg">
+                                        </div>
+                                        <div class="legal__item__text">
+                                            <a href="#">Правила предоставления микрокредитов</a>
+                                        </div>
+                                    </div>
+                                    <div class="legal__item">
+                                        <div class="legal__item__img">
+                                            <img src="assets/img/legal-2.svg">
+                                        </div>
+                                        <div class="legal__item__text">
+                                            <a href="#">Политика в отношении обработки персональных данных</a>
+                                        </div>
+                                    </div>
+                                    <div class="legal__item">
+                                        <div class="legal__item__img">
+                                            <img src="assets/img/legal-2.svg">
+                                        </div>
+                                        <div class="legal__item__text">
+                                            <a href="#">Лицензия 05.21.0003.M</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Счета -->
+
+                        <div class="tabs__content" data-tabs-target="cards">
+                            <div class="cabinet__wrapper">
+                                <div class="cabinet__dogovora">
+                                    <div class="legal__item">
+                                        <div class="legal__item__img">
+                                            <img src="assets/img/legal-2.svg">
+                                        </div>
+                                        <div class="legal__item__text">
+                                            <a href="#">Договор о предоставлении микрокредита</a>
+                                        </div>
+                                    </div>
+                                    <div class="legal__item">
+                                        <div class="legal__item__img">
+                                            <img src="assets/img/legal-2.svg">
+                                        </div>
+                                        <div class="legal__item__text">
+                                            <a href="#">Правила предоставления микрокредитов</a>
+                                        </div>
+                                    </div>
+                                    <div class="legal__item">
+                                        <div class="legal__item__img">
+                                            <img src="assets/img/legal-2.svg">
+                                        </div>
+                                        <div class="legal__item__text">
+                                            <a href="#">Политика в отношении обработки персональных данных</a>
+                                        </div>
+                                    </div>
+                                    <div class="legal__item">
+                                        <div class="legal__item__img">
+                                            <img src="assets/img/legal-2.svg">
+                                        </div>
+                                        <div class="legal__item__text">
+                                            <a href="#">Лицензия 05.21.0003.M</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                         <!-- ДОГОВОРА -->
 
-                        <div class="tabs__content" data-tabs-target="settings">
+                        <div class="tabs__content" data-tabs-target="dog">
                             <div class="cabinet__wrapper">
                                 <div class="cabinet__dogovora">
                                     <div class="legal__item">
@@ -471,7 +566,7 @@
                                 <button class="modal-item-btn">
                                     5 дней
                                 </button>
-                                <button class="modal-item-btn">
+                                <button class="modal-item-btn modal-item-btn--active">
                                     10 дней
                                 </button>
                                 <button class="modal-item-btn">
@@ -502,7 +597,22 @@
 			</div>
     	</div>
 
+        <script>
+            const modalHandleChangeBtn = document.getElementsByClassName("modal-item-btn");
+            const activesBtn = document.getElementsByClassName('modal-item-btn--active');
+                for (i = 0; modalHandleChangeBtn.length > i; i++) {
+                modalHandleChangeBtn[i].onclick = function() {
+                    const currentActive = activesBtn[0];
 
+                    if (currentActive)
+                        currentActive.classList.remove("modal-item-btn--active");
+
+                    if (currentActive !== this)
+                        this.classList.add("modal-item-btn--active");
+                };
+            }
+        </script>
+        
         <!-- Modals-->
         
         <script>

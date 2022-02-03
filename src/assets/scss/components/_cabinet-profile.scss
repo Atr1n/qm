@@ -14,7 +14,7 @@
 
         &__content {
             display: grid;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
 
         &__form__content {
@@ -35,6 +35,9 @@
                 border: 1px solid #EDF1F4;
                 border-radius: 5px;
                 cursor: pointer;
+                &--active {
+                    border: 1px solid #FFDE17;
+                }
                 button {
                     background: none;
                     cursor: pointer;

@@ -7,6 +7,70 @@
         }
     }
 
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-top: 1rem;
+        &_list {
+            width: 400px;
+            padding: 0.7rem 0;
+            &:not(:last-child) {
+                border-bottom: 1px solid #EDF1F4;
+            }
+            &--active {
+                color: #F23261;
+            }
+            h3 {
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 30px;
+                cursor: pointer;
+            }
+            p {
+                margin-left: 1rem;
+                margin-bottom: 0.3rem;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 20px;
+                color: #000000;
+            }
+            a {
+                margin-left: 1rem;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 20px;
+                color: #000000;
+            }
+        }
+        &_item {
+            iframe {
+                border-radius: 10px;
+            }
+            &:last-child {
+                padding-top: 1rem;
+            }
+        }
+    }
+
+    &__fil {
+        padding: 1rem 1.5rem;
+        border: 1px solid #EDF1F4;
+        border-radius: 5px;
+        background: none;
+        cursor: pointer;
+        &--active {
+            background: linear-gradient(135deg, #01D06D 0%, #00C2FF 100%);
+        }
+        &_content {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+    }
+
     &__list {
         margin: 0;
         padding: 0;
@@ -24,25 +88,20 @@
         gap: 0.5rem;
         padding: 1rem 1.5rem;
         background: rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(4px);
         color: #fff;
-        cursor: pointer;
         font-weight: 600;
         font-size: 16px;
         line-height: 20px;
         text-align: center;
-        transition: background-color 0.3s ease-in-out,
-        color 0.3s ease-in-out;
+        cursor: pointer;
         &:last-child {
             border-top-right-radius: 5px;
         }
         &--active {
+            padding-top: 1rem;
             background-color: #fff;
             color: var(--color-accent);
-            transition: background-color 0.3s ease-in-out,
-            color 0.3s ease-in-out;
             pointer-events: none;
-            transform: scaleY(1.2);
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
         }

@@ -79,6 +79,10 @@
 			color: #000000;
 			white-space: nowrap;
 			cursor: pointer;
+			&--active {
+				background: linear-gradient(135deg, #01D06D 0%, #00C2FF 100%);
+				color: #fff;
+			}
 		}
 
 		&-submit {
